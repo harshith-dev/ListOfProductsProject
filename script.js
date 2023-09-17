@@ -20,11 +20,15 @@ async function data(){
 }
 
 async function homepage(){
+    try{
     let productslist = await data();
     allproducts=productslist;
     loader.style.display = "none";
     details(productslist);
+}catch(err){
+    alert("unable to fetch data")
     
+}
 
 }
 function clearProduct(){
