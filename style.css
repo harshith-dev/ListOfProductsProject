@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Mooli', sans-serif; 
+   
+}
+body{
+    background: rgba(44, 41, 54, 0.658);
+
+
+
+}
+.loader{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.75s, visibility 0.75s;
+     
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5 ;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform:rotate(0turn) ;
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background:transparent;
+    position: sticky;
+    top: 0px;
+    background-color: grey;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    padding: 0px 20px;
+}
+header h1{
+    color: white;
+    float: left;
+    margin: 0;
+}
+header #search{
+    font-size: 30px;
+    border-radius: 1.5rem;
+    height: 50px;
+    width: 100%;
+  
+
+}
+
+#products{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+   
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 450px;
+    width: 420px;
+    border-radius: 1.5rem;
+    background-color: #fafafa;
+    box-shadow: 3px 3px 10px 0px #ae9fdb;
+    
+
+}
+.image{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    max-width: 100%;
+    max-height: 100%;;
+    object-fit: contain;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 100%;
+    font-size: 20px;
+    line-height: 0.5px; 
+}
+
+content .title {
+        font-family: 'Mooli', sans-serif;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+.content .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 25%;
+    height: 40px;
+    border-radius: 2rem;
+    background-color: #ae9fdb;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: grey;
+}
+
+@media (max-width:1080px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+}
