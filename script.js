@@ -27,7 +27,7 @@ async function homepage(){
     details(productslist);
 }catch(err){
     alert("unable to fetch data")
-    
+
 }
 
 }

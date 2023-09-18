@@ -73,8 +73,6 @@ header #search{
     border-radius: 1.5rem;
     height: 50px;
     width: 100%;
-  
-
 }
 
 #products{
@@ -146,5 +144,8 @@ content .title {
     header{
         display: flex;
         flex-direction: column;
+        height: 26vh;
+        width: 100vw;
+        justify-content: center;
     }
 }
